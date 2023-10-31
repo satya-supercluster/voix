@@ -10,11 +10,11 @@ export default function AuthLayout() {
       {isAuthenticated ? (
         <Navigate to="/" />
       ) : (
-        <div className="flex max-h-screen overflow-hidden">
-          <section className="flex flex-1 justify-center items-center flex-col">
+        <>
+          <section className="flex flex-1 justify-center items-center flex-col py-10">
             <Outlet />
           </section>
-          <section className="xl:block h-screen w-1/2 justify-center items-center pr-14 relative top-1/2 -translate-y-1/3"  >
+          <section className="hidden xl:block h-screen w-1/2 justify-center items-center pr-10 relative top-1/2 -translate-y-1/3"  >
           <div>
             <video
               src="/assets/images/side-img.mp4"
@@ -25,7 +25,7 @@ export default function AuthLayout() {
             />
           </div>
           </section>
-        </div>
+        </>
       )}
     </>
   );
